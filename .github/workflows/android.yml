@@ -1,0 +1,126 @@
+name: Android CI
+
+on:
+  push:
+    paths-ignore:
+      - '**/*.md'
+      - '.clang-format'
+  pull_request:
+    paths-ignore:
+      - '**/*.md'
+      - '.clang-format'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - version: v111
+            task-name: assembleV111Release
+          - version: v115
+            task-name: assembleV115Release
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Checkout assets
+        uses: actions/checkout@v5
+        with:
+          repository: ${{ secrets.ASSETS_REPO }}
+          path: app/src/main/assets
+          token: ${{ secrets.ASSETS_TOKEN }}
+
+      - name: Set up JDK
+        uses: actions/setup-java@v5
+        with:
+          java-version: 17
+          distribution: temurin
+          cache: gradle
+
+      - name: Decode keystore
+        env:
+          KEYSTORE_ENCODED: ${{ secrets.KEYSTORE }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          echo "$KEYSTORE_ENCODED" | base64 -d > app/keystore.jks
+          echo "storeFile=keystore.jks" >> keystore.properties
+          echo "storePassword=$KEYSTORE_PASSWORD" >> keystore.properties
+          echo "keyAlias=$KEY_ALIAS" >> keystore.properties
+          echo "keyPassword=$KEY_PASSWORD" >> keystore.properties
+
+      - name: Build with Gradle
+        run: |
+          chmod +x gradlew
+          ./gradlew ${{ matrix.task-name }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v5
+        with:
+          name: PvZ-TV-${{ matrix.version }}-release
+          path: app/build/outputs/apk/${{ matrix.version }}/release/*.apk
+
+  release:
+    permissions:
+      contents: write
+
+    needs: [ build ]
+
+    if: >
+      github.ref == 'refs/heads/main' &&
+      github.repository == 'Dicot0721/PlantsVsZombies-AndroidTV'
+
+    runs-on: ubuntu-latest
+
+    concurrency:
+      group: release
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Set build variables
+        id: build_vars
+        run: |
+          echo "date=$(git log --date=format:%y%m%d --pretty=format:'%cd' -n 1)" >> "$GITHUB_OUTPUT"
+          echo "commits_count=$(git rev-list --count HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Download v111 artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: PvZ-TV-v111-release
+          path: artifact
+
+      - name: Download v115 artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: PvZ-TV-v115-release
+          path: artifact
+
+      - name: Release
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          prerelease: true
+          automatic_release_tag: nightly
+          title: Nightly Build
+          files: artifact/*.apk
+
+      - name: Archive builds
+        uses: softprops/action-gh-release@v2
+        with:
+          repository: Dicot0721/PvZ-TV-builds
+          token: ${{ secrets.BUILDS_TOKEN }}
+          prerelease: false
+          make_latest: true
+          tag_name: ${{ steps.build_vars.outputs.date }}-${{ steps.build_vars.outputs.commits_count }}
+          body: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}
+          files: artifact/*.apk

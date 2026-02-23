@@ -1,0 +1,409 @@
+Starting a Gradle Daemon, 2 busy and 4 stopped Daemons could not be reused, use --status for details
+
+> Configure project :app
+WARNING: [CXX5202] This app only has 32-bit [armeabi-v7a] native libraries. Beginning August 1, 2019 Google Play store requires that all apps that include native libraries must provide 64-bit versions. For more information, visit https://g.co/64-bit-requirement
+[CXX5202] This app only has 32-bit [armeabi-v7a] native libraries. Beginning August 1, 2019 Google Play store requires that all apps that include native libraries must provide 64-bit versions. For more information, visit https://g.co/64-bit-requirement
+WARNING: [CXX5202] This app only has 32-bit [armeabi-v7a] native libraries. Beginning August 1, 2019 Google Play store requires that all apps that include native libraries must provide 64-bit versions. For more information, visit https://g.co/64-bit-requirement
+[CXX5202] This app only has 32-bit [armeabi-v7a] native libraries. Beginning August 1, 2019 Google Play store requires that all apps that include native libraries must provide 64-bit versions. For more information, visit https://g.co/64-bit-requirement
+WARNING: [CXX5202] This app only has 32-bit [armeabi-v7a] native libraries. Beginning August 1, 2019 Google Play store requires that all apps that include native libraries must provide 64-bit versions. For more information, visit https://g.co/64-bit-requirement
+[CXX5202] This app only has 32-bit [armeabi-v7a] native libraries. Beginning August 1, 2019 Google Play store requires that all apps that include native libraries must provide 64-bit versions. For more information, visit https://g.co/64-bit-requirement
+WARNING: [CXX5202] This app only has 32-bit [armeabi-v7a] native libraries. Beginning August 1, 2019 Google Play store requires that all apps that include native libraries must provide 64-bit versions. For more information, visit https://g.co/64-bit-requirement
+[CXX5202] This app only has 32-bit [armeabi-v7a] native libraries. Beginning August 1, 2019 Google Play store requires that all apps that include native libraries must provide 64-bit versions. For more information, visit https://g.co/64-bit-requirement
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preV111DebugBuild UP-TO-DATE
+> Task :app:mergeV111DebugNativeDebugMetadata NO-SOURCE
+> Task :app:javaPreCompileV111Debug UP-TO-DATE
+> Task :app:checkV111DebugAarMetadata UP-TO-DATE
+> Task :app:generateV111DebugResValues UP-TO-DATE
+> Task :app:mapV111DebugSourceSetPaths UP-TO-DATE
+> Task :app:generateV111DebugResources UP-TO-DATE
+> Task :app:mergeV111DebugResources UP-TO-DATE
+> Task :app:packageV111DebugResources UP-TO-DATE
+> Task :app:parseV111DebugLocalResources UP-TO-DATE
+> Task :app:createV111DebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksV111Debug UP-TO-DATE
+> Task :app:processV111DebugMainManifest UP-TO-DATE
+> Task :app:processV111DebugManifest UP-TO-DATE
+> Task :app:processV111DebugManifestForPackage UP-TO-DATE
+> Task :app:processV111DebugResources UP-TO-DATE
+> Task :app:compileV111DebugJavaWithJavac UP-TO-DATE
+> Task :app:mergeV111DebugShaders UP-TO-DATE
+> Task :app:compileV111DebugShaders NO-SOURCE
+> Task :app:generateV111DebugAssets UP-TO-DATE
+> Task :app:mergeV111DebugAssets UP-TO-DATE
+> Task :app:compressV111DebugAssets UP-TO-DATE
+> Task :app:checkV111DebugDuplicateClasses UP-TO-DATE
+> Task :app:desugarV111DebugFileDependencies UP-TO-DATE
+> Task :app:mergeV111DebugStartupProfile UP-TO-DATE
+> Task :app:mergeExtDexV111Debug UP-TO-DATE
+> Task :app:mergeLibDexV111Debug UP-TO-DATE
+> Task :app:dexBuilderV111Debug UP-TO-DATE
+> Task :app:mergeProjectDexV111Debug UP-TO-DATE
+> Task :app:processV111DebugJavaRes NO-SOURCE
+> Task :app:mergeV111DebugJavaResource UP-TO-DATE
+> Task :app:configureCMakeDebug[armeabi-v7a]
+
+> Task :app:buildCMakeDebug[armeabi-v7a]
+C/C++: ninja: Entering directory `C:\Users\nydil\Desktop\PlantsVsZombies-AndroidTV-main\app\.cxx\Debug\262t71q4\armeabi-v7a'
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Board/Zombie.cpp:1893:13: warning: unused variable 'aRenderOrder' [-Wunused-variable]
+C/C++:  1893 |         int aRenderOrder = mRenderOrder + 1;
+C/C++:       |             ^~~~~~~~~~~~
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Board/Zombie.cpp:1902:24: warning: variable 'aEffect' set but not used [-Wunused-but-set-variable]
+C/C++:  1902 |         ParticleEffect aEffect = ParticleEffect::PARTICLE_ZOMBIE_HEAD;
+C/C++:       |                        ^
+C/C++: 2 warnings generated.
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/HouseChooserDialog.cpp:73:14: warning: case value not in enumerated type 'Sexy::KeyCode' [-Wswitch]
+C/C++:    73 |         case 304:
+C/C++:       |              ^
+C/C++: 1 warning generated.
+C/C++: C:\Users\nydil\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=armv7-none-linux-androideabi21 --sysroot=C:/Users/nydil/AppData/Local/Android/Sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DHomura_EXPORTS -DPVZ_DEBUG=1 -DPVZ_VERSION=111 -IC:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/Homura/include -IC:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include -IC:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/ThirdParty/Substrate -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -Wall -Werror=return-type -Werror=unused-result -fno-limit-debug-info  -fPIC -std=gnu++2b -MD -MT CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/VSSetupMenu.cpp.o -MF CMakeFiles\Homura.dir\PvZ\src\Lawn\Widget\VSSetupMenu.cpp.o.d -o CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/VSSetupMenu.cpp.o -c C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:40:5: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+C/C++:    40 |     gVSSetupAddonWidget = new VSSetupAddonWidget(this);
+C/C++:       |     ^~~~~~~~~~~~~~~~~~~
+C/C++:       |     gVSSetupWidget
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+C/C++:    36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+C/C++:       |                                  ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:41:22: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+C/C++:    41 |     gVSSetupWidget = gVSSetupAddonWidget;
+C/C++:       |                      ^~~~~~~~~~~~~~~~~~~
+C/C++:       |                      gVSSetupWidget
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+C/C++:    36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+C/C++:       |                                  ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:60:9: error: unknown type name 'gVSSetupAddonWidget'; did you mean 'VSSetupAddonWidget'?
+C/C++:    60 |     if (gVSSetupAddonWidget)
+C/C++:       |         ^~~~~~~~~~~~~~~~~~~
+C/C++:       |         VSSetupAddonWidget
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:60:7: note: 'VSSetupAddonWidget' declared here
+C/C++:    60 | class VSSetupAddonWidget {
+C/C++:       |       ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:60:28: error: expected unqualified-id
+C/C++:    60 |     if (gVSSetupAddonWidget)
+C/C++:       |                            ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:61:9: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+C/C++:    61 |         gVSSetupAddonWidget->~VSSetupAddonWidget();
+C/C++:       |         ^~~~~~~~~~~~~~~~~~~
+C/C++:       |         gVSSetupWidget
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+C/C++:    36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+C/C++:       |                                  ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:106:92: error: expected unqualified-id
+C/C++:   106 |                     TodDrawString(g, StrFormat(fmt.c_str(), opt.c_str()), 140, 620, *Sexy::FONT_HOUSEOFTERROR28, Color(255, 255, 153, 255), DrawStringJustification::DS_ALIGN_LEFT);
+C/C++:       |                                                                                            ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:31:30: note: expanded from macro 'FONT_HOUSEOFTERROR28'
+C/C++:    31 | #define FONT_HOUSEOFTERROR28 (*Sexy_FONT_HOUSEOFTERROR28_Addr)
+C/C++:       |                              ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:112:92: error: expected unqualified-id
+C/C++:   112 |                     TodDrawString(g, StrFormat(fmt.c_str(), opt.c_str()), 140, 620, *Sexy::FONT_HOUSEOFTERROR28, Color(255, 255, 153, 255), DrawStringJustification::DS_ALIGN_LEFT);
+C/C++:       |                                                                                            ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:31:30: note: expanded from macro 'FONT_HOUSEOFTERROR28'
+C/C++:    31 | #define FONT_HOUSEOFTERROR28 (*Sexy_FONT_HOUSEOFTERROR28_Addr)
+C/C++:       |                              ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:118:92: error: expected unqualified-id
+C/C++:   118 |                     TodDrawString(g, StrFormat(fmt.c_str(), opt.c_str()), 140, 620, *Sexy::FONT_HOUSEOFTERROR28, Color(255, 255, 153, 255), DrawStringJustification::DS_ALIGN_LEFT);
+C/C++:       |                                                                                            ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:31:30: note: expanded from macro 'FONT_HOUSEOFTERROR28'
+C/C++:    31 | #define FONT_HOUSEOFTERROR28 (*Sexy_FONT_HOUSEOFTERROR28_Addr)
+C/C++:       |                              ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:123:62: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+C/C++:   123 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mExtraPacketsMode) ? "[VS_OPT_ENABLE_EXTRA_SLOTS]" : "[VS_OPT_DISABLE_EXTRA_SLOTS]");
+C/C++:       |                                                              ^~~~~~~~~~~~~~~~~~~
+C/C++:       |                                                              gVSSetupWidget
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+C/C++:    36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+C/C++:       |                                  ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:123:86: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+C/C++:   123 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mExtraPacketsMode) ? "[VS_OPT_ENABLE_EXTRA_SLOTS]" : "[VS_OPT_DISABLE_EXTRA_SLOTS]");
+C/C++:       |                                                                                      ^~~~~~~~~~~~~~~~~~~
+C/C++:       |                                                                                      gVSSetupWidget
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+C/C++:    36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+C/C++:       |                                  ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:124:92: error: expected unqualified-id
+C/C++:   124 |                     TodDrawString(g, StrFormat(fmt.c_str(), opt.c_str()), 140, 620, *Sexy::FONT_HOUSEOFTERROR28, Color(255, 255, 153, 255), DrawStringJustification::DS_ALIGN_LEFT);
+C/C++:       |                                                                                            ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:31:30: note: expanded from macro 'FONT_HOUSEOFTERROR28'
+C/C++:    31 | #define FONT_HOUSEOFTERROR28 (*Sexy_FONT_HOUSEOFTERROR28_Addr)
+C/C++:       |                              ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:129:62: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+C/C++:   129 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mExtraSeedsMode) ? "[VS_OPT_ENABLE_EXTRA_SEEDS]" : "[VS_OPT_DISABLE_EXTRA_SEEDS]");
+C/C++:       |                                                              ^~~~~~~~~~~~~~~~~~~
+C/C++:       |                                                              gVSSetupWidget
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+C/C++:    36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+C/C++:       |                                  ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:129:86: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+C/C++:   129 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mExtraSeedsMode) ? "[VS_OPT_ENABLE_EXTRA_SEEDS]" : "[VS_OPT_DISABLE_EXTRA_SEEDS]");
+C/C++:       |                                                                                      ^~~~~~~~~~~~~~~~~~~
+C/C++:       |                                                                                      gVSSetupWidget
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+C/C++:    36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+C/C++:       |                                  ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:130:92: error: expected unqualified-id
+C/C++:   130 |                     TodDrawString(g, StrFormat(fmt.c_str(), opt.c_str()), 140, 620, *Sexy::FONT_HOUSEOFTERROR28, Color(255, 255, 153, 255), DrawStringJustification::DS_ALIGN_LEFT);
+C/C++:       |                                                                                            ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:31:30: note: expanded from macro 'FONT_HOUSEOFTERROR28'
+C/C++:    31 | #define FONT_HOUSEOFTERROR28 (*Sexy_FONT_HOUSEOFTERROR28_Addr)
+C/C++:       |                              ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:135:62: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+C/C++:   135 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mBanMode) ? "[VS_OPT_ENABLE_BAN_MODE]" : "[VS_OPT_DISABLE_BAN_MODE]");
+C/C++:       |                                                              ^~~~~~~~~~~~~~~~~~~
+C/C++:       |                                                              gVSSetupWidget
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+C/C++:    36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+C/C++:       |                                  ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:135:86: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+C/C++:   135 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mBanMode) ? "[VS_OPT_ENABLE_BAN_MODE]" : "[VS_OPT_DISABLE_BAN_MODE]");
+C/C++:       |                                                                                      ^~~~~~~~~~~~~~~~~~~
+C/C++:       |                                                                                      gVSSetupWidget
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+C/C++:    36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+C/C++:       |                                  ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:136:92: error: expected unqualified-id
+C/C++:   136 |                     TodDrawString(g, StrFormat(fmt.c_str(), opt.c_str()), 140, 620, *Sexy::FONT_HOUSEOFTERROR28, Color(255, 255, 153, 255), DrawStringJustification::DS_ALIGN_LEFT);
+C/C++:       |                                                                                            ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:31:30: note: expanded from macro 'FONT_HOUSEOFTERROR28'
+C/C++:    31 | #define FONT_HOUSEOFTERROR28 (*Sexy_FONT_HOUSEOFTERROR28_Addr)
+C/C++:       |                              ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:141:62: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+C/C++:   141 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mBalancePatchMode) ? "[VS_OPT_ENABLE_BALANCE_PATCH]" : "[VS_OPT_DISABLE_BALANCE_PATCH]");
+C/C++:       |                                                              ^~~~~~~~~~~~~~~~~~~
+C/C++:       |                                                              gVSSetupWidget
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+C/C++:    36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+C/C++:       |                                  ^
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:141:86: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+C/C++:   141 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mBalancePatchMode) ? "[VS_OPT_ENABLE_BALANCE_PATCH]" : "[VS_OPT_DISABLE_BALANCE_PATCH]");
+C/C++:       |                                                                                      ^~~~~~~~~~~~~~~~~~~
+C/C++:       |                                                                                      gVSSetupWidget
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+C/C++:    36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+C/C++:       |                                  ^
+C/C++: fatal error: too many errors emitted, stopping now [-ferror-limit=]
+C/C++: 20 errors generated.
+C/C++: C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/WaitForSecondPlayerDialog.cpp:1282:88: warning: offset of on non-standard-layout type 'WaitForSecondPlayerDialog' [-Winvalid-offsetof]
+C/C++:  1282 |     auto *dialog = reinterpret_cast<WaitForSecondPlayerDialog *>((uint32_t(listener) - offsetof(WaitForSecondPlayerDialog, mButtonListener)));
+C/C++:       |                                                                                        ^                                   ~~~~~~~~~~~~~~~
+C/C++: C:\Users\nydil\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64/lib/clang/18/include/__stddef_offsetof.h:11:24: note: expanded from macro 'offsetof'
+C/C++:    11 | #define offsetof(t, d) __builtin_offsetof(t, d)
+C/C++:       |                        ^                     ~
+C/C++: 1 warning generated.
+
+> Task :app:buildCMakeDebug[armeabi-v7a] FAILED
+
+[Incubating] Problems report is available at: file:///C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:buildCMakeDebug[armeabi-v7a]'.
+> com.android.ide.common.process.ProcessException: ninja: Entering directory `C:\Users\nydil\Desktop\PlantsVsZombies-AndroidTV-main\app\.cxx\Debug\262t71q4\armeabi-v7a'
+  [1/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Board/Plant.cpp.o
+  [2/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Board/SeedBank.cpp.o
+  [3/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Board/Projectile.cpp.o
+  [4/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Board/SeedPacket.cpp.o
+  [5/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Board/Zombie.cpp.o
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Board/Zombie.cpp:1893:13: warning: unused variable 'aRenderOrder' [-Wunused-variable]
+   1893 |         int aRenderOrder = mRenderOrder + 1;
+        |             ^~~~~~~~~~~~
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Board/Zombie.cpp:1902:24: warning: variable 'aEffect' set but not used [-Wunused-but-set-variable]
+   1902 |         ParticleEffect aEffect = ParticleEffect::PARTICLE_ZOMBIE_HEAD;
+        |                        ^
+  2 warnings generated.
+  [6/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Board/ZenGarden.cpp.o
+  [7/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/System/PoolEffect.cpp.o
+  [8/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/LawnApp.cpp.o
+  [9/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/GamepadControls.cpp.o
+  [10/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Board/Board.cpp.o
+  [11/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/System/PlayerInfo.cpp.o
+  [12/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/System/Music.cpp.o
+  [13/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/System/ReanimationLawn.cpp.o
+  [14/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/ChallengeScreen.cpp.o
+  [15/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/AwardScreen.cpp.o
+  [16/39] Building CXX object CMakeFiles/Homura.dir/Main.cpp.o
+  [17/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/AlmanacDialog.cpp.o
+  [18/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/ConfirmBackToMainDialog.cpp.o
+  [19/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/HelpTextScreen.cpp.o
+  [20/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/HelpOptionsDialog.cpp.o
+  [21/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/ImitaterDialog.cpp.o
+  [22/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/HouseChooserDialog.cpp.o
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/HouseChooserDialog.cpp:73:14: warning: case value not in enumerated type 'Sexy::KeyCode' [-Wswitch]
+     73 |         case 304:
+        |              ^
+  1 warning generated.
+  [23/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/CreditScreen.cpp.o
+  [24/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/LeaderboardsWidget.cpp.o
+  [25/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/TitleScreen.cpp.o
+  [26/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/SeedChooserScreen.cpp.o
+  [27/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/SettingsDialog.cpp.o
+  [28/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/MailScreen.cpp.o
+  [29/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/MainMenu.cpp.o
+  [30/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/StoreScreen.cpp.o
+  [31/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/TrashBin.cpp.o
+  [32/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Misc.cpp.o
+  [33/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/VSSetupMenu.cpp.o
+  FAILED: CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/VSSetupMenu.cpp.o 
+  C:\Users\nydil\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=armv7-none-linux-androideabi21 --sysroot=C:/Users/nydil/AppData/Local/Android/Sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DHomura_EXPORTS -DPVZ_DEBUG=1 -DPVZ_VERSION=111 -IC:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/Homura/include -IC:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include -IC:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/ThirdParty/Substrate -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -Wall -Werror=return-type -Werror=unused-result -fno-limit-debug-info  -fPIC -std=gnu++2b -MD -MT CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/VSSetupMenu.cpp.o -MF CMakeFiles\Homura.dir\PvZ\src\Lawn\Widget\VSSetupMenu.cpp.o.d -o CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/VSSetupMenu.cpp.o -c C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:40:5: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+     40 |     gVSSetupAddonWidget = new VSSetupAddonWidget(this);
+        |     ^~~~~~~~~~~~~~~~~~~
+        |     gVSSetupWidget
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+     36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+        |                                  ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:41:22: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+     41 |     gVSSetupWidget = gVSSetupAddonWidget;
+        |                      ^~~~~~~~~~~~~~~~~~~
+        |                      gVSSetupWidget
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+     36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+        |                                  ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:60:9: error: unknown type name 'gVSSetupAddonWidget'; did you mean 'VSSetupAddonWidget'?
+     60 |     if (gVSSetupAddonWidget)
+        |         ^~~~~~~~~~~~~~~~~~~
+        |         VSSetupAddonWidget
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:60:7: note: 'VSSetupAddonWidget' declared here
+     60 | class VSSetupAddonWidget {
+        |       ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:60:28: error: expected unqualified-id
+     60 |     if (gVSSetupAddonWidget)
+        |                            ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:61:9: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+     61 |         gVSSetupAddonWidget->~VSSetupAddonWidget();
+        |         ^~~~~~~~~~~~~~~~~~~
+        |         gVSSetupWidget
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+     36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+        |                                  ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:106:92: error: expected unqualified-id
+    106 |                     TodDrawString(g, StrFormat(fmt.c_str(), opt.c_str()), 140, 620, *Sexy::FONT_HOUSEOFTERROR28, Color(255, 255, 153, 255), DrawStringJustification::DS_ALIGN_LEFT);
+        |                                                                                            ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:31:30: note: expanded from macro 'FONT_HOUSEOFTERROR28'
+     31 | #define FONT_HOUSEOFTERROR28 (*Sexy_FONT_HOUSEOFTERROR28_Addr)
+        |                              ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:112:92: error: expected unqualified-id
+    112 |                     TodDrawString(g, StrFormat(fmt.c_str(), opt.c_str()), 140, 620, *Sexy::FONT_HOUSEOFTERROR28, Color(255, 255, 153, 255), DrawStringJustification::DS_ALIGN_LEFT);
+        |                                                                                            ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:31:30: note: expanded from macro 'FONT_HOUSEOFTERROR28'
+     31 | #define FONT_HOUSEOFTERROR28 (*Sexy_FONT_HOUSEOFTERROR28_Addr)
+        |                              ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:118:92: error: expected unqualified-id
+    118 |                     TodDrawString(g, StrFormat(fmt.c_str(), opt.c_str()), 140, 620, *Sexy::FONT_HOUSEOFTERROR28, Color(255, 255, 153, 255), DrawStringJustification::DS_ALIGN_LEFT);
+        |                                                                                            ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:31:30: note: expanded from macro 'FONT_HOUSEOFTERROR28'
+     31 | #define FONT_HOUSEOFTERROR28 (*Sexy_FONT_HOUSEOFTERROR28_Addr)
+        |                              ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:123:62: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+    123 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mExtraPacketsMode) ? "[VS_OPT_ENABLE_EXTRA_SLOTS]" : "[VS_OPT_DISABLE_EXTRA_SLOTS]");
+        |                                                              ^~~~~~~~~~~~~~~~~~~
+        |                                                              gVSSetupWidget
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+     36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+        |                                  ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:123:86: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+    123 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mExtraPacketsMode) ? "[VS_OPT_ENABLE_EXTRA_SLOTS]" : "[VS_OPT_DISABLE_EXTRA_SLOTS]");
+        |                                                                                      ^~~~~~~~~~~~~~~~~~~
+        |                                                                                      gVSSetupWidget
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+     36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+        |                                  ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:124:92: error: expected unqualified-id
+    124 |                     TodDrawString(g, StrFormat(fmt.c_str(), opt.c_str()), 140, 620, *Sexy::FONT_HOUSEOFTERROR28, Color(255, 255, 153, 255), DrawStringJustification::DS_ALIGN_LEFT);
+        |                                                                                            ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:31:30: note: expanded from macro 'FONT_HOUSEOFTERROR28'
+     31 | #define FONT_HOUSEOFTERROR28 (*Sexy_FONT_HOUSEOFTERROR28_Addr)
+        |                              ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:129:62: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+    129 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mExtraSeedsMode) ? "[VS_OPT_ENABLE_EXTRA_SEEDS]" : "[VS_OPT_DISABLE_EXTRA_SEEDS]");
+        |                                                              ^~~~~~~~~~~~~~~~~~~
+        |                                                              gVSSetupWidget
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+     36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+        |                                  ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:129:86: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+    129 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mExtraSeedsMode) ? "[VS_OPT_ENABLE_EXTRA_SEEDS]" : "[VS_OPT_DISABLE_EXTRA_SEEDS]");
+        |                                                                                      ^~~~~~~~~~~~~~~~~~~
+        |                                                                                      gVSSetupWidget
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+     36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+        |                                  ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:130:92: error: expected unqualified-id
+    130 |                     TodDrawString(g, StrFormat(fmt.c_str(), opt.c_str()), 140, 620, *Sexy::FONT_HOUSEOFTERROR28, Color(255, 255, 153, 255), DrawStringJustification::DS_ALIGN_LEFT);
+        |                                                                                            ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:31:30: note: expanded from macro 'FONT_HOUSEOFTERROR28'
+     31 | #define FONT_HOUSEOFTERROR28 (*Sexy_FONT_HOUSEOFTERROR28_Addr)
+        |                              ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:135:62: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+    135 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mBanMode) ? "[VS_OPT_ENABLE_BAN_MODE]" : "[VS_OPT_DISABLE_BAN_MODE]");
+        |                                                              ^~~~~~~~~~~~~~~~~~~
+        |                                                              gVSSetupWidget
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+     36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+        |                                  ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:135:86: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+    135 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mBanMode) ? "[VS_OPT_ENABLE_BAN_MODE]" : "[VS_OPT_DISABLE_BAN_MODE]");
+        |                                                                                      ^~~~~~~~~~~~~~~~~~~
+        |                                                                                      gVSSetupWidget
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+     36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+        |                                  ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:136:92: error: expected unqualified-id
+    136 |                     TodDrawString(g, StrFormat(fmt.c_str(), opt.c_str()), 140, 620, *Sexy::FONT_HOUSEOFTERROR28, Color(255, 255, 153, 255), DrawStringJustification::DS_ALIGN_LEFT);
+        |                                                                                            ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:31:30: note: expanded from macro 'FONT_HOUSEOFTERROR28'
+     31 | #define FONT_HOUSEOFTERROR28 (*Sexy_FONT_HOUSEOFTERROR28_Addr)
+        |                              ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:141:62: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+    141 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mBalancePatchMode) ? "[VS_OPT_ENABLE_BALANCE_PATCH]" : "[VS_OPT_DISABLE_BALANCE_PATCH]");
+        |                                                              ^~~~~~~~~~~~~~~~~~~
+        |                                                              gVSSetupWidget
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+     36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+        |                                  ^
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/VSSetupMenu.cpp:141:86: error: use of undeclared identifier 'gVSSetupAddonWidget'; did you mean 'gVSSetupWidget'?
+    141 |                     pvzstl::string opt = TodStringTranslate((gVSSetupAddonWidget && !gVSSetupAddonWidget->mBalancePatchMode) ? "[VS_OPT_ENABLE_BALANCE_PATCH]" : "[VS_OPT_DISABLE_BALANCE_PATCH]");
+        |                                                                                      ^~~~~~~~~~~~~~~~~~~
+        |                                                                                      gVSSetupWidget
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/include/PvZ/Lawn/Widget/VSSetupAddonWidget.h:36:34: note: 'gVSSetupWidget' declared here
+     36 | inline class VSSetupAddonWidget *gVSSetupWidget;
+        |                                  ^
+  fatal error: too many errors emitted, stopping now [-ferror-limit=]
+  20 errors generated.
+  [34/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/SexyAppFramework/SexyAppBase.cpp.o
+  [35/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/TodLib/Effect/TodFoley.cpp.o
+  [36/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/TodLib/Effect/FilterEffect.cpp.o
+  [37/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/Lawn/Widget/WaitForSecondPlayerDialog.cpp.o
+  C:/Users/nydil/Desktop/PlantsVsZombies-AndroidTV-main/app/src/main/cpp/PvZ/src/Lawn/Widget/WaitForSecondPlayerDialog.cpp:1282:88: warning: offset of on non-standard-layout type 'WaitForSecondPlayerDialog' [-Winvalid-offsetof]
+   1282 |     auto *dialog = reinterpret_cast<WaitForSecondPlayerDialog *>((uint32_t(listener) - offsetof(WaitForSecondPlayerDialog, mButtonListener)));
+        |                                                                                        ^                                   ~~~~~~~~~~~~~~~
+  C:\Users\nydil\AppData\Local\Android\Sdk\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64/lib/clang/18/include/__stddef_offsetof.h:11:24: note: expanded from macro 'offsetof'
+     11 | #define offsetof(t, d) __builtin_offsetof(t, d)
+        |                        ^                     ~
+  1 warning generated.
+  [38/39] Building CXX object CMakeFiles/Homura.dir/PvZ/src/TodLib/Effect/Reanimator.cpp.o
+  ninja: build stopped: subcommand failed.
+  
+  C++ build system [build] failed while executing:
+      @echo off
+      "C:\\Users\\nydil\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe" ^
+        -C ^
+        "C:\\Users\\nydil\\Desktop\\PlantsVsZombies-AndroidTV-main\\app\\.cxx\\Debug\\262t71q4\\armeabi-v7a" ^
+        Homura
+    from C:\Users\nydil\Desktop\PlantsVsZombies-AndroidTV-main\app
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.0-milestone-1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 1m 25s
+28 actionable tasks: 2 executed, 26 up-to-date
