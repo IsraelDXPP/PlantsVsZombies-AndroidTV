@@ -1,77 +1,75 @@
 <div align="center">
 
-# PlantsVsZombies AndroidTV
+# PvZ Touch
 
-**English** | **[简体中文](./README.zh-cn.md)**
-
-[![license](https://img.shields.io/github/license/Dicot0721/PlantsVsZombies-AndroidTV)][GPL-3.0]
-[![Android CI](https://github.com/Dicot0721/PlantsVsZombies-AndroidTV/actions/workflows/android.yml/badge.svg)](https://github.com/Dicot0721/PlantsVsZombies-AndroidTV/actions/workflows/android.yml "Android CI")
-
-A mod of _Plants vs. Zombies_ Android TV version.
+Mod de *Plants vs. Zombies* versión Android TV.
 
 </div>
 
-## Build
+## Compilación
 
-- Ensure the following is installed:
-    * Android SDK Platform 34
-    * NDK v27.2.12479018 (r27c)
-    * CMake v3.20+
+### Requisitos
 
-- Clone the repository.
-    ```sh
-    git clone https://github.com/Dicot0721/PlantsVsZombies-AndroidTV.git
-    ```
+* Android SDK Platform 34
+* NDK r27c (27.2.12479018)
+* CMake 3.20 o superior
 
-- Copy assets files to the path `PlantsVsZombies-AndroidTV/app/src/main/assets/`.
-    > If you need resource files, please contact the repository author.
+### Pasos
 
-- Build with:
-    * Android Studio: Click on the build button.
-    * Command line: Run the following command:
-        ```sh
-        cd PlantsVsZombies-AndroidTV
-        ./gradlew assembleDebug
-        ```
+1. Clona el repositorio:
 
-- If release, configure signing using the file `keystore.properties` located in the project root directory (you must
-    create this file yourself). The file content format is as follows:
-    ```properties
-    storePassword=myStorePassword
-    keyPassword=mykeyPassword
-    keyAlias=myKeyAlias
-    storeFile=myStoreFileLocation
-    ```
+```sh
+git clone https://github.com/Dicot0721/PlantsVsZombies-AndroidTV.git
+```
 
-## Contributing
+2. Copia los archivos de recursos en:
 
-### Coding Style (C++)
+```
+PlantsVsZombies-AndroidTV/app/src/main/assets/
+```
 
-#### Name Convention
+3. Compila el proyecto:
 
-- Functions / types / concepts: `PascalCase`
-- Variables: `camelCase`
-- Namespaces: `snake_case`
-- Macros / constants / enumerators / non-type template parameters: `UPPER_CASE`
+* Desde Android Studio: usa el botón **Build**.
+* Desde la terminal:
 
-#### Format
+```sh
+cd PlantsVsZombies-AndroidTV
+./gradlew assembleDebug
+```
 
-See [`.clang-format`](/.clang-format).
+### Compilación en modo Release
 
-> It is recommended to format the code using the IDE before each commit.
+Crea un archivo `keystore.properties` en la raíz del proyecto con el siguiente formato:
 
-### Commit
+```properties
+storePassword=tuStorePassword
+keyPassword=tuKeyPassword
+keyAlias=tuKeyAlias
+storeFile=rutaDelKeystore
+```
 
-Refer to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+---
 
-### Pull Request (PR)
+## Contribución
 
-Send the PR to branch `dev`.
+### Estilo de código (C++)
 
-## License
+* Funciones, tipos y conceptos: `PascalCase`
+* Variables: `camelCase`
+* Namespaces: `snake_case`
+* Macros y constantes: `UPPER_CASE`
 
-The source code for this project is licensed under the [GPL-3.0][GPL-3.0] license.
+Se recomienda formatear el código antes de cada commit.
 
-This project is not associated with or endorsed by Transmension, PopCap or Electronic Arts.
+### Pull Requests
 
-[GPL-3.0]: https://www.gnu.org/licenses/gpl-3.0.html "GPL-3.0"
+Enviar los PR a la rama `dev`.
+
+---
+
+## Licencia
+
+Este proyecto está bajo la licencia GPL-3.0.
+
+No está afiliado ni respaldado por Transmension, PopCap o Electronic Arts.
