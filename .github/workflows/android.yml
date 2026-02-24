@@ -71,10 +71,10 @@ jobs:
 
     needs: [ build ]
 
-    if: >
-      github.ref == 'refs/heads/master' &&
-      github.repository == 'IsraelDXPP/PlantsVsZombies-AndroidTV'
-
+  if: >
+    github.ref == 'refs/heads/master' &&
+    github.repository == 'IsraelDXPP/PlantsVsZombies-AndroidTV'
+    
     runs-on: ubuntu-latest
 
     concurrency:
