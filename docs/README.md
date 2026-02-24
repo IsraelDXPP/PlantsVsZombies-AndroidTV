@@ -53,13 +53,6 @@ storeFile=rutaDelKeystore
 
 ---
 
-## Contribuciones
-
-* Mantener el formato consistente antes de hacer commit.
-* Enviar Pull Requests a la rama `dev`.
-
----
-
 ## Licencia
 
 Proyecto bajo licencia GPL-3.0.
