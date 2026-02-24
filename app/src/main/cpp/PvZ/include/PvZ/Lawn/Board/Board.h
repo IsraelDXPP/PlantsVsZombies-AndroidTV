@@ -463,11 +463,11 @@ public:
     Sexy::Rect GetButterButtonRect() {
         if (butterGlove) {
             Sexy::Rect aShovelRect = GetShovelButtonRect();
-            if (goldenShovel) {
-                // Pala activa: poner el botón de mantequilla a la izquierda de la pala
+            if (mShowShovel) {
+                // Pala visible: poner el botón de mantequilla a la izquierda de la pala
                 return {aShovelRect.mX - aShovelRect.mWidth - 2, aShovelRect.mY, aShovelRect.mWidth, aShovelRect.mHeight};
             } else {
-                // Sin pala activa: ocupar la misma posición que la pala
+                // Pala oculta: ocupar la misma posición que la pala
                 return aShovelRect;
             }
         }

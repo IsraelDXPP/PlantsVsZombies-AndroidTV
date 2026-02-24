@@ -1644,7 +1644,9 @@ void Board::Update() {
             playerInfo->mCoins = 99999;
 
             // Mostrar mensaje de confirmación
-            DisplayAdvice("¡Todo desbloqueado!", MESSAGE_STYLE_HINT_TALL_FAST, ADVICE_NONE);
+            if (Board_DisplayAdviceAddr != nullptr) {
+                DisplayAdvice("Desbloqueado Todo PapuLeche", MESSAGE_STYLE_HINT_TALL_FAST, ADVICE_NONE);
+            }
         }
     }
     if (butterGlove) {
@@ -2254,8 +2256,8 @@ void Board::DrawButterButton(Sexy::Graphics *g, LawnApp *theApp) {
         g->SetColorizeImages(true);
         g->SetColor(color);
     }
-    // 实现拿着黄油的时候不在栏内绘制黄油
-    if (!requestDrawButterInCursor) {
+    // 实现拿着黄油的时候不在栏内绘制黄油 (支持双人同时持有或者 cheat)
+    if (!requestDrawButterInCursor && !requestDrawButterInCursor_2P) {
         g->DrawImage(*Sexy_IMAGE_BUTTER_ICON_Addr, rect.mX - 7, rect.mY - 3);
     }
     if (keyboardMode) {
@@ -2931,9 +2933,15 @@ void Board::__MouseDown(int x, int y, int theClickCount) {
         return;
     }
     if (mObjectType == GameObjectType::OBJECT_TYPE_BUTTER) {
-        // En modo cheat, usar el jugador que hizo clic; de lo contrario forzar P2
+        // En modo cheat, permitir que el jugador actual lo recoja. De lo contrario forzar P2.
         if (!butterGlove) {
-            gPlayerIndex = TouchPlayerIndex::TOUCHPLAYER_PLAYER2; // 玩家2
+            gPlayerIndex = TouchPlayerIndex::TOUCHPLAYER_PLAYER2;
+        } else {
+            // Determinar gPlayerIndex basado en la posición o lógica de MouseHitTest
+            // Para simplificar, si butterGlove es cheat, gPlayerIndex ya debería ser TOUCHPLAYER_PLAYER1 por el false en MouseHitTest
+            // pero vamos a asegurarnos.
+            if (x > 800) gPlayerIndex = TouchPlayerIndex::TOUCHPLAYER_PLAYER2; 
+            else gPlayerIndex = TouchPlayerIndex::TOUCHPLAYER_PLAYER1;
         }
         mTouchState = TouchState::TOUCHSTATE_BUTTER_RECT;
         if (mGameState == 7) {
@@ -2952,11 +2960,20 @@ void Board::__MouseDown(int x, int y, int theClickCount) {
             mGamepadControls2->OnKeyDown(KeyCode::KEYCODE_ESCAPE, 1096);
         }
         RefreshSeedPacketFromCursor(1);
-        if (requestDrawButterInCursor) {
-            requestDrawButterInCursor = false;
+        if (gPlayerIndex == TouchPlayerIndex::TOUCHPLAYER_PLAYER2) {
+            if (requestDrawButterInCursor_2P) {
+                requestDrawButterInCursor_2P = false;
+            } else {
+                requestDrawButterInCursor_2P = true;
+                mApp->PlayFoley(FoleyType::FOLEY_FLOOP);
+            }
         } else {
-            requestDrawButterInCursor = true;
-            mApp->PlayFoley(FoleyType::FOLEY_FLOOP);
+            if (requestDrawButterInCursor) {
+                requestDrawButterInCursor = false;
+            } else {
+                requestDrawButterInCursor = true;
+                mApp->PlayFoley(FoleyType::FOLEY_FLOOP);
+            }
         }
         return;
     }
@@ -3349,6 +3366,8 @@ void Board::__MouseUp(int x, int y, int theClickCount) {
         if (gPlayerIndex == TouchPlayerIndex::TOUCHPLAYER_PLAYER1) {
             if (requestDrawShovelInCursor) {
                 ShovelDown();
+            } else if (requestDrawButterInCursor) {
+                requestDrawButterInCursor = false;
             } else if (mGameState == 7 || isCobCannonSelected || mCursorType == CursorType::CURSOR_TYPE_PLANT_FROM_USABLE_COIN) {
                 if (mGameMode == GameMode::GAMEMODE_CHALLENGE_BEGHOULED || mGameMode == GameMode::GAMEMODE_CHALLENGE_BEGHOULED_TWIST) {
                     mGamepadControls1->OnKeyDown(KeyCode::KEYCODE_ESCAPE, 1096);
@@ -3385,8 +3404,8 @@ void Board::__MouseUp(int x, int y, int theClickCount) {
                 }
             }
         } else {
-            if (requestDrawButterInCursor) {
-                requestDrawButterInCursor = false;
+            if (requestDrawButterInCursor_2P) {
+                requestDrawButterInCursor_2P = false;
             } else if (mGameState_2P == 7 || isCobCannonSelected_2P || mCursorType_2P == CursorType::CURSOR_TYPE_PLANT_FROM_USABLE_COIN) {
                 if (mGameMode == GameMode::GAMEMODE_CHALLENGE_BEGHOULED || mGameMode == GameMode::GAMEMODE_CHALLENGE_BEGHOULED_TWIST) {
                     mGamepadControls2->OnKeyDown(KeyCode::KEYCODE_ESCAPE, 1096);
