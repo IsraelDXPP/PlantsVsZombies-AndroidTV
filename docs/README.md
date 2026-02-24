@@ -1,8 +1,10 @@
 <div align="center">
 
-# PvZ Touch
+# PvZ Touch (Fork)
 
 Mod de *Plants vs. Zombies* versión Android TV.
+
+Este fork añade nuevos **cheats al mod menu** y elimina algunos elementos innecesarios de la versión original para hacerlo más limpio y ligero.
 
 </div>
 
@@ -30,7 +32,7 @@ PlantsVsZombies-AndroidTV/app/src/main/assets/
 
 3. Compila el proyecto:
 
-* Desde Android Studio: usa el botón **Build**.
+* Desde Android Studio: usa **Build**.
 * Desde la terminal:
 
 ```sh
@@ -40,7 +42,7 @@ cd PlantsVsZombies-AndroidTV
 
 ### Compilación en modo Release
 
-Crea un archivo `keystore.properties` en la raíz del proyecto con el siguiente formato:
+Crea un archivo `keystore.properties` en la raíz del proyecto:
 
 ```properties
 storePassword=tuStorePassword
@@ -51,25 +53,15 @@ storeFile=rutaDelKeystore
 
 ---
 
-## Contribución
+## Contribuciones
 
-### Estilo de código (C++)
-
-* Funciones, tipos y conceptos: `PascalCase`
-* Variables: `camelCase`
-* Namespaces: `snake_case`
-* Macros y constantes: `UPPER_CASE`
-
-Se recomienda formatear el código antes de cada commit.
-
-### Pull Requests
-
-Enviar los PR a la rama `dev`.
+* Mantener el formato consistente antes de hacer commit.
+* Enviar Pull Requests a la rama `dev`.
 
 ---
 
 ## Licencia
 
-Este proyecto está bajo la licencia GPL-3.0.
+Proyecto bajo licencia GPL-3.0.
 
 No está afiliado ni respaldado por Transmension, PopCap o Electronic Arts.
