@@ -4,9 +4,14 @@
 
 Mod de *Plants vs. Zombies* versión Android TV.
 
-Este fork añade nuevos **cheats al mod menu** y elimina algunos elementos innecesarios de la versión original para hacerlo más limpio y ligero.
+Este fork mantenido en
+[https://github.com/IsraelDXPP/PlantsVsZombies-AndroidTV](https://github.com/IsraelDXPP/PlantsVsZombies-AndroidTV)
+
+añade nuevos **cheats al mod menu** y elimina elementos innecesarios de la versión original para hacerlo más limpio y optimizado.
 
 </div>
+
+---
 
 ## Compilación
 
@@ -18,10 +23,10 @@ Este fork añade nuevos **cheats al mod menu** y elimina algunos elementos innec
 
 ### Pasos
 
-1. Clona el repositorio:
+1. Clona este fork:
 
 ```sh
-git clone https://github.com/Dicot0721/PlantsVsZombies-AndroidTV.git
+git clone https://github.com/IsraelDXPP/PlantsVsZombies-AndroidTV.git
 ```
 
 2. Copia los archivos de recursos en:
@@ -42,7 +47,7 @@ cd PlantsVsZombies-AndroidTV
 
 ### Compilación en modo Release
 
-Crea un archivo `keystore.properties` en la raíz del proyecto:
+Crea un archivo `keystore.properties` en la raíz del proyecto con el siguiente formato:
 
 ```properties
 storePassword=tuStorePassword
@@ -50,6 +55,14 @@ keyPassword=tuKeyPassword
 keyAlias=tuKeyAlias
 storeFile=rutaDelKeystore
 ```
+
+---
+
+## Modificaciones y contribuciones
+
+Se permiten modificaciones y forks del proyecto.
+
+Sin embargo, **no se aceptan contribuciones directas, Pull Requests ni cambios externos** en este repositorio.
 
 ---
 
