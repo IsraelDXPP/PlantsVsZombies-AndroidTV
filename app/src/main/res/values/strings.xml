@@ -152,7 +152,7 @@
     <string name="addon_launch">Iniciar juego</string>
 
     <string name="addon_hide_self_itemname">Ocultar icono</string>
-    <string name="addon_hide_self">Opciones de %s</string>
+    <string name="addon_hide_self">Opciones</string>
     <string name="addon_hide_self_title1">Mostrar icono</string>
     <string name="addon_hide_self_title2">Ocultar icono</string>
     <string name="addon_hide_self_message1">¿Deseas mostrar el icono de acceso directo?</string>
