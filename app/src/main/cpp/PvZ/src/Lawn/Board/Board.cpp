@@ -1649,9 +1649,6 @@ void Board::Update() {
             }
         }
     }
-    if (butterGlove) {
-        mShowButter = true;
-    }
 
     if (mApp->mGameMode == GAMEMODE_MP_VS && !mApp->mVSSetupScreen) {
         if (tcpClientSocket >= 0) {
@@ -2151,6 +2148,10 @@ void Board::Update() {
 
     UpdateButtons();
     old_Board_Update(this);
+
+    if (butterGlove) {
+        mShowButter = true;
+    }
 }
 
 int Board::GetNumWavesPerFlag() {

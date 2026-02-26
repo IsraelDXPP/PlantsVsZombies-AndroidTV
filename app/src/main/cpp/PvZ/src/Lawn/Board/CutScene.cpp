@@ -37,6 +37,10 @@ void CutScene::ShowShovel() {
     }
 
     old_CutScene_ShowShovel(this);
+
+    if (butterGlove) {
+        mBoard->mShowButter = true;
+    }
 }
 
 
