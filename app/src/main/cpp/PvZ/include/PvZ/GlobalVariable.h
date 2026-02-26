@@ -36,7 +36,7 @@ inline bool doKeyboardTwoPlayerDialog;
 inline bool requestDrawShovelInCursor;
 inline GameButton *gBoardMenuButton;
 inline GameButton *gBoardStoreButton;
-inline bool requestDrawButterInCursor; // Dibujo de mantequilla para P1 o P2 (según quién lo recoja primero o forzado)
+inline bool requestDrawButterInCursor;    // Dibujo de mantequilla para P1 o P2 (según quién lo recoja primero o forzado)
 inline bool requestDrawButterInCursor_2P; // Dibujo de mantequilla para P2 independiente
 inline int VSBackGround;
 inline bool seedPacketFastCoolDown; // Interruptor de enfriamiento de cartas

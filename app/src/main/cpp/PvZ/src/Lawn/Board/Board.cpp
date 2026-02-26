@@ -2941,8 +2941,10 @@ void Board::__MouseDown(int x, int y, int theClickCount) {
             // Determinar gPlayerIndex basado en la posición o lógica de MouseHitTest
             // Para simplificar, si butterGlove es cheat, gPlayerIndex ya debería ser TOUCHPLAYER_PLAYER1 por el false en MouseHitTest
             // pero vamos a asegurarnos.
-            if (x > 800) gPlayerIndex = TouchPlayerIndex::TOUCHPLAYER_PLAYER2; 
-            else gPlayerIndex = TouchPlayerIndex::TOUCHPLAYER_PLAYER1;
+            if (x > 800)
+                gPlayerIndex = TouchPlayerIndex::TOUCHPLAYER_PLAYER2;
+            else
+                gPlayerIndex = TouchPlayerIndex::TOUCHPLAYER_PLAYER1;
         }
         mTouchState = TouchState::TOUCHSTATE_BUTTER_RECT;
         if (mGameState == 7) {
