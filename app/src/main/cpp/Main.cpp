@@ -618,7 +618,7 @@ extern "C" JNIEXPORT jobjectArray JNICALL Java_com_android_support_CkHomuraMenu_
         "Collapse_Configuración de Nivel",
         "87_CollapseAdd_Toggle_Pausar oleadas",
         "88_CollapseAdd_Toggle_Sin cortacéspedes",
-        "83_CollapseAdd_Toggle_Eliminar cartas obligatorias",
+        "83_CollapseAdd_Toggle_Sin Semillas de Crazy Dave",
         "84_CollapseAdd_Toggle_Modo Infinito I, Zombi",
         "81_CollapseAdd_OnceCheckBox_Saltar nivel",
         "102_CollapseAdd_Spinner_<font color='green'>Escenario:_Normal,Día,Noche,Piscina,Niebla,Tejado,Noche lunar,Invernadero,Jardín de setas,Acuario",

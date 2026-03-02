@@ -848,11 +848,19 @@ void Plant::Fire(Zombie *theTargetZombie, int theRow, PlantWeapon thePlantWeapon
             aRangeX = 40.0f;
         }
 
-        aProjectile->mMotionType = ProjectileMotion::MOTION_LOBBED;
-        aProjectile->mVelX = aRangeX / 120.0f;
-        aProjectile->mVelY = 0.0f;
-        aProjectile->mVelZ = aRangeY / 120.0f - 7.0f;
-        aProjectile->mAccZ = 0.115f;
+        if (homingProjectiles) {
+            aProjectile->mMotionType = ProjectileMotion::MOTION_HOMING;
+            aProjectile->mVelX = 3.33f;
+            aProjectile->mVelY = 0.0f;
+            aProjectile->mVelZ = 0.0f;
+            aProjectile->mAccZ = 0.0f;
+        } else {
+            aProjectile->mMotionType = ProjectileMotion::MOTION_LOBBED;
+            aProjectile->mVelX = aRangeX / 120.0f;
+            aProjectile->mVelY = 0.0f;
+            aProjectile->mVelZ = aRangeY / 120.0f - 7.0f;
+            aProjectile->mAccZ = 0.115f;
+        }
     } else if (mSeedType == SeedType::SEED_THREEPEATER) {
         if (theRow < mRow) {
             aProjectile->mMotionType = ProjectileMotion::MOTION_THREEPEATER;

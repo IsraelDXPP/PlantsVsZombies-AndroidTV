@@ -138,33 +138,38 @@ void Projectile::Update() {
         }
 
         if (aTargetZombie != nullptr) {
-            // Girar progresivamente hacia el objetivo (suavidad y seguridad en variables de estado)
-            float aTargetX = aTargetZombie->mX + 40;
-            float aTargetY = aTargetZombie->mY + 40;
-            float aDx = aTargetX - mPosX;
-            float aDy = aTargetY - mPosY;
-            float aDist = sqrt(aDx * aDx + aDy * aDy);
+            if (mProjectileType == ProjectileType::PROJECTILE_COBBIG) {
+                // Cob Cannon: Actualizar constantemente la posición de impacto
+                mCobTargetX = aTargetZombie->mX + 40;
+                mCobTargetRow = aTargetZombie->mRow;
+                // El misil sigue cayendo (MOTION_LOBBED), ajustamos levemente su X para que coincida con el objetivo
+                mPosX = (mPosX * 0.95f) + (mCobTargetX * 0.05f);
+            } else {
+                // Girar progresivamente hacia el objetivo (suavidad y seguridad en variables de estado)
+                float aTargetX = aTargetZombie->mX + 40;
+                float aTargetY = aTargetZombie->mY + 40;
+                float aDx = aTargetX - mPosX;
+                float aDy = aTargetY - mPosY;
+                float aDist = sqrt(aDx * aDx + aDy * aDy);
 
-            if (aDist > 0.1f) {
-                float aSpeed = sqrt(mVelX * mVelX + mVelY * mVelY);
-                if (aSpeed < 3.0f)
-                    aSpeed = 3.0f; // Velocidad mínima garantizada
-                if (aSpeed > 50.0f)
-                    aSpeed = 50.0f; // Cap para evitar distorsiones incontrolables
+                if (aDist > 0.1f) {
+                    float aCurrentSpeed = sqrt(mVelX * mVelX + mVelY * mVelY);
+                    float aTargetSpeed = aCurrentSpeed;
+                    if (aTargetSpeed < 3.33f) aTargetSpeed = 3.33f;
+                    if (aTargetSpeed > 15.0f) aTargetSpeed = 15.0f;
 
-                // Ajustar velocidad gradualmente, sin perder momento súbito
-                mVelX = (mVelX * 0.9f) + (aDx / aDist * aSpeed * 0.1f);
-                mVelY = (mVelY * 0.9f) + (aDy / aDist * aSpeed * 0.1f);
+                    // Ajustar velocidad gradualmente, sin perder momento súbito
+                    mVelX = (mVelX * 0.9f) + (aDx / aDist * aTargetSpeed * 0.1f);
+                    mVelY = (mVelY * 0.9f) + (aDy / aDist * aTargetSpeed * 0.1f);
+                }
             }
-        } else {
-            // Si no hay zombis, el proyectil sigue derecho hacia la derecha (evita congelamiento)
+        } else if (mProjectileType != ProjectileType::PROJECTILE_COBBIG) {
+            // Sin objetivo: El proyectil sigue en su dirección actual (estilo Cattail)
             float aSpeed = sqrt(mVelX * mVelX + mVelY * mVelY);
-            if (aSpeed < 3.0f)
-                aSpeed = 3.0f;
-
-            // Forzamos que siga hacia adelante (X positiva) y suavizamos la Y hacia 0
-            mVelX = (mVelX * 0.95f) + (aSpeed * 0.05f);
-            mVelY = (mVelY * 0.95f); // Tiende a estabilizarse horizontalmente
+            if (aSpeed < 0.5f) {
+                mVelX = 3.33f;
+                mVelY = 0.0f;
+            }
         }
     }
 
