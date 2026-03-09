@@ -162,8 +162,10 @@ void Projectile::Update() {
                 if (aDist > 0.1f) {
                     float aCurrentSpeed = sqrt(mVelX * mVelX + mVelY * mVelY);
                     float aTargetSpeed = aCurrentSpeed;
-                    if (aTargetSpeed < 3.33f) aTargetSpeed = 3.33f;
-                    if (aTargetSpeed > 15.0f) aTargetSpeed = 15.0f;
+                    if (aTargetSpeed < 3.33f)
+                        aTargetSpeed = 3.33f;
+                    if (aTargetSpeed > 15.0f)
+                        aTargetSpeed = 15.0f;
 
                     // Ajustar velocidad gradualmente, sin perder momento súbito
                     mVelX = (mVelX * 0.9f) + (aDx / aDist * aTargetSpeed * 0.1f);
