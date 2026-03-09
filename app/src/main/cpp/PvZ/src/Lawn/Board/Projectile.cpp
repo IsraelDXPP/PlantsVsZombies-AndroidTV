@@ -55,8 +55,8 @@ void Projectile::ProjectileInitialize(int theX, int theY, int theRenderOrder, in
     // projectile->mNewProjectileLastX = theX;
     // projectile->mNewProjectileLastY = theY;
     if (!isOnlyTouchFireWood) {
-        // 僵尸子弹与加农炮子弹NULL
-        if (theProjectileType == ProjectileType::PROJECTILE_COBBIG || theProjectileType == ProjectileType::PROJECTILE_ZOMBIE_PEA) {
+        // 子弹排除：加农炮子弹、僵尸子弹、篮球
+        if (theProjectileType == ProjectileType::PROJECTILE_COBBIG || theProjectileType == ProjectileType::PROJECTILE_ZOMBIE_PEA || theProjectileType == ProjectileType::PROJECTILE_BASKETBALL) {
             old_Projectile_ProjectileInitialize(this, theX, theY, theRenderOrder, theRow, theProjectileType);
             return;
         }
@@ -84,7 +84,9 @@ void Projectile::ProjectileInitialize(int theX, int theY, int theRenderOrder, in
     mTargetZombieID = ZombieID::ZOMBIEID_NULL;
 
     if (homingProjectiles) {
-        mMotionType = ProjectileMotion::MOTION_HOMING;
+        if (mProjectileType != ProjectileType::PROJECTILE_COBBIG) {
+            mMotionType = ProjectileMotion::MOTION_HOMING;
+        }
         mDamageRangeFlags |= 2; // DAMAGES_FLYING flag (bit 1)
     }
 }
@@ -102,7 +104,7 @@ void Projectile::Update() {
     }
 
     // Lógica de proyectiles buscadores
-    if (homingProjectiles && mBoard != nullptr && !mDead) {
+    if (homingProjectiles && mBoard != nullptr && !mDead && mMotionType == ProjectileMotion::MOTION_HOMING) {
         Zombie *aTargetZombie = nullptr;
 
         // Búsqueda ultra-segura del zombi por ID para evitar crashes en la lectura de memoria (DataArrayGet) con IDs basura
@@ -138,16 +140,21 @@ void Projectile::Update() {
         }
 
         if (aTargetZombie != nullptr) {
+            Sexy::Rect aTargetRect = aTargetZombie->GetZombieRect();
+            float aTargetX = aTargetRect.mX + aTargetRect.mWidth / 2.0f;
+            float aTargetY = aTargetRect.mY + aTargetRect.mHeight / 2.0f;
+
             if (mProjectileType == ProjectileType::PROJECTILE_COBBIG) {
-                // Cob Cannon: Actualizar constantemente la posición de impacto
-                mCobTargetX = aTargetZombie->mX + 40;
-                mCobTargetRow = aTargetZombie->mRow;
-                // El misil sigue cayendo (MOTION_LOBBED), ajustamos levemente su X para que coincida con el objetivo
-                mPosX = (mPosX * 0.95f) + (mCobTargetX * 0.05f);
+                // Cob Cannon: Solo actualizar si ya está en el cielo (mPosZ < -200) o descendiendo (mVelZ > 0)
+                if (mPosZ < -200.0f || mVelZ > 0.0f) {
+                    // Actualizar constantemente la posición de impacto en el centro del objetivo
+                    mCobTargetX = aTargetX;
+                    mCobTargetRow = aTargetZombie->mRow;
+                    // El misil sigue cayendo (MOTION_LOBBED), ajustamos levemente su X para que coincida con el objetivo
+                    mPosX = (mPosX * 0.95f) + (mCobTargetX * 0.05f);
+                }
             } else {
                 // Girar progresivamente hacia el objetivo (suavidad y seguridad en variables de estado)
-                float aTargetX = aTargetZombie->mX + 40;
-                float aTargetY = aTargetZombie->mY + 40;
                 float aDx = aTargetX - mPosX;
                 float aDy = aTargetY - mPosY;
                 float aDist = sqrt(aDx * aDx + aDy * aDy);

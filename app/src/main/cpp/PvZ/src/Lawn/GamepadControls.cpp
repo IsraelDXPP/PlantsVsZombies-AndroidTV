@@ -123,13 +123,13 @@ void GamepadControls::Draw(Sexy::Graphics *g) {
         bool is2P = mPlayerIndex1 == 1;
         CursorObject *aCursorObject = is2P ? mBoard->mCursorObject2 : mBoard->mCursorObject1;
         if (is2P) {
-            if (requestDrawButterInCursor) {
+            if (requestDrawButterInCursor && anApp->mGameScene == GameScenes::SCENE_PLAYING && mBoard->mBoardFadeOutCounter <= 0) {
                 if (!butterGlove && !anApp->IsCoopMode())
                     requestDrawButterInCursor = false;
                 g->DrawImage(addonImages.butter_glove, mCursorPositionX, mCursorPositionY);
             }
         } else {
-            if (requestDrawButterInCursor && butterGlove) {
+            if (requestDrawButterInCursor && butterGlove && anApp->mGameScene == GameScenes::SCENE_PLAYING && mBoard->mBoardFadeOutCounter <= 0) {
                 g->DrawImage(addonImages.butter_glove, mCursorPositionX - 10, mCursorPositionY - 10);
             }
             if (requestDrawShovelInCursor) {

@@ -1725,7 +1725,7 @@ void Board::Update() {
     }
 
 
-    if (requestDrawButterInCursor) {
+    if (requestDrawButterInCursor && mApp->mGameScene == GameScenes::SCENE_PLAYING && mBoardFadeOutCounter <= 0 && !mCutScene->mSeedChoosing) {
         if (butterGlove) {
             Zombie *z1 = ZombieHitTest(mGamepadControls1->mCursorPositionX, mGamepadControls1->mCursorPositionY, 1);
             if (z1)
@@ -2150,7 +2150,7 @@ void Board::Update() {
     old_Board_Update(this);
 
     if (butterGlove) {
-        mShowButter = true;
+        mShowButter = (mApp->mGameScene == GameScenes::SCENE_PLAYING && mBoardFadeOutCounter <= 0 && !mCutScene->mSeedChoosing);
     }
 }
 
